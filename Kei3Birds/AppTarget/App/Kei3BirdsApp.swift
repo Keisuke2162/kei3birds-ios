@@ -37,36 +37,37 @@ struct MainTabView: View {
 
     var body: some View {
         TabView {
-            MapView(viewModel: MapViewModel(fetchMapPointsUseCase: container.fetchMapPointsUseCase))
-                .tabItem { Label("マップ", systemImage: "map") }
-
-            EncyclopediaView(
-                viewModel: EncyclopediaViewModel(
-                    fetchBirdsUseCase: container.fetchBirdsUseCase,
-                    fetchObservationsUseCase: container.fetchObservationsUseCase
-                ),
-                container: container
-            )
-            .tabItem { Label("図鑑", systemImage: "book") }
-
-            CameraView(
-                viewModel: IdentifyViewModel(
-                    identifyBirdUseCase: container.identifyBirdUseCase,
-                    createObservationUseCase: container.createObservationUseCase
+            Tab("マップ", systemImage: "map") {
+                MapView(viewModel: MapViewModel(fetchMapPointsUseCase: container.fetchMapPointsUseCase))
+            }
+            Tab("図鑑", systemImage: "book") {
+                EncyclopediaView(
+                    viewModel: EncyclopediaViewModel(
+                        fetchBirdsUseCase: container.fetchBirdsUseCase,
+                        fetchObservationsUseCase: container.fetchObservationsUseCase
+                    ),
+                    container: container
                 )
-            )
-            .tabItem { Label("撮影", systemImage: "camera") }
-
-            ProfileView(
-                viewModel: ProfileViewModel(
-                    fetchBirdsUseCase: container.fetchBirdsUseCase,
-                    fetchObservationsUseCase: container.fetchObservationsUseCase,
-                    authUseCase: container.authUseCase,
-                    username: authViewModel.currentUser?.username ?? "ゲスト"
-                ),
-                authViewModel: authViewModel
-            )
-            .tabItem { Label("プロフィール", systemImage: "person") }
+            }
+            Tab("撮影", systemImage: "camera") {
+                CameraView(
+                    viewModel: IdentifyViewModel(
+                        identifyBirdUseCase: container.identifyBirdUseCase,
+                        createObservationUseCase: container.createObservationUseCase
+                    )
+                )
+            }
+            Tab("プロフィール", systemImage: "person") {
+                ProfileView(
+                    viewModel: ProfileViewModel(
+                        fetchBirdsUseCase: container.fetchBirdsUseCase,
+                        fetchObservationsUseCase: container.fetchObservationsUseCase,
+                        authUseCase: container.authUseCase,
+                        username: authViewModel.currentUser?.username ?? "ゲスト"
+                    ),
+                    authViewModel: authViewModel
+                )
+            }
         }
     }
 }

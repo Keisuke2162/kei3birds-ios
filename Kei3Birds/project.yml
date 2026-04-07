@@ -2,7 +2,7 @@ name: Kei3Birds
 options:
   xcodeVersion: "16.0"
   deploymentTarget:
-    iOS: "17.0"
+    iOS: "26.0"
   bundleIdPrefix: com.kei3islands
 
 packages:

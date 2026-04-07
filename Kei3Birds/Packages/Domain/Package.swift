@@ -1,9 +1,9 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.2
 import PackageDescription
 
 let package = Package(
     name: "Domain",
-    platforms: [.iOS(.v17)],
+    platforms: [.iOS("26.0")],
     products: [
         .library(name: "Domain", targets: ["Domain"]),
     ],
