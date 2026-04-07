@@ -13,8 +13,8 @@ struct ObservationDTO: Codable, Sendable {
     let ai_candidates: [AICandidateDTO]?
     let notes: String?
 
-    func toDomain() -> Observation {
-        Observation(
+    func toDomain() -> BirdObservation {
+        BirdObservation(
             id: id,
             userId: user_id,
             speciesId: species_id,

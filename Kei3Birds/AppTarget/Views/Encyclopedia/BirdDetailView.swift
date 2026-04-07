@@ -5,7 +5,7 @@ struct BirdDetailView: View {
     let speciesId: Int
     @State var viewModel: BirdDetailViewModel
     let username: String
-    @State private var selectedObservation: Observation?
+    @State private var selectedObservation: BirdObservation?
 
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 3)
 
@@ -64,7 +64,7 @@ struct BirdDetailView: View {
 }
 
 private struct ObservationDetailSheet: View {
-    let observation: Observation
+    let observation: BirdObservation
     let birdName: String
     let username: String
 
