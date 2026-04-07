@@ -39,6 +39,8 @@ final class AuthViewModel {
         do {
             let user = try await authUseCase.signInWithGoogle(idToken: idToken, accessToken: accessToken)
             isAuthenticated = true
+            // セッションからuserIdを取得（setUsernameで必要）
+            userId = await authUseCase.getUserId()
             if let user {
                 currentUser = user
             } else {
