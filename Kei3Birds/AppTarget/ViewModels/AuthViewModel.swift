@@ -22,12 +22,12 @@ final class AuthViewModel {
         defer { isLoading = false }
         do {
             let user = try await authUseCase.restoreSession()
+            userId = await authUseCase.getUserId()
+            isAuthenticated = true
             if let user {
                 currentUser = user
-                isAuthenticated = true
             } else {
                 needsUsername = true
-                isAuthenticated = true
             }
         } catch {
             isAuthenticated = false
