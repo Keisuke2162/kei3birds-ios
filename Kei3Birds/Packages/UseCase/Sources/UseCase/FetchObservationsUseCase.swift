@@ -7,11 +7,11 @@ public final class FetchObservationsUseCase: Sendable {
         self.repository = repository
     }
 
-    public func execute(speciesId: Int? = nil) async throws -> [Observation] {
+    public func execute(speciesId: Int? = nil) async throws -> [BirdObservation] {
         try await repository.fetchAll(speciesId: speciesId)
     }
 
-    public func execute(id: String) async throws -> Observation {
+    public func execute(id: String) async throws -> BirdObservation {
         try await repository.fetch(id: id)
     }
 }

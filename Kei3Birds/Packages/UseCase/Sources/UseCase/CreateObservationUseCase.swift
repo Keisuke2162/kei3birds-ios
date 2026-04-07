@@ -10,7 +10,7 @@ public final class CreateObservationUseCase: Sendable {
         self.uploadRepository = uploadRepository
     }
 
-    public func execute(imageData: Data, input: CreateObservationInput) async throws -> Observation {
+    public func execute(imageData: Data, input: CreateObservationInput) async throws -> BirdObservation {
         let photoUrl = try await uploadRepository.uploadPhoto(imageData: imageData, fileExtension: "jpg")
         let finalInput = CreateObservationInput(
             speciesId: input.speciesId,

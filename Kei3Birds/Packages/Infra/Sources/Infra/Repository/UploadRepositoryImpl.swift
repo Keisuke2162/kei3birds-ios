@@ -3,7 +3,7 @@ import Domain
 
 public final class UploadRepositoryImpl: UploadRepository {
     private let apiClient: APIClient
-    private let tokenProvider: () async -> String?
+    private let tokenProvider: @Sendable () async -> String?
 
     public init(apiClient: APIClient, tokenProvider: @escaping @Sendable () async -> String?) {
         self.apiClient = apiClient
