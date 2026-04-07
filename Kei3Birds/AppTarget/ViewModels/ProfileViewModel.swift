@@ -1,3 +1,4 @@
+import Observation
 import Foundation
 import Domain
 import UseCase
@@ -9,7 +10,7 @@ final class ProfileViewModel {
     private let fetchObservationsUseCase: FetchObservationsUseCase
     private let authUseCase: AuthUseCase
 
-    var observations: [Observation] = []
+    var observations: [BirdObservation] = []
     var totalSpecies = 0
     var isLoading = false
     var username: String

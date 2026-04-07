@@ -3,14 +3,14 @@ import Domain
 
 public final class ObservationRepositoryImpl: ObservationRepository {
     private let apiClient: APIClient
-    private let tokenProvider: () async -> String?
+    private let tokenProvider: @Sendable () async -> String?
 
     public init(apiClient: APIClient, tokenProvider: @escaping @Sendable () async -> String?) {
         self.apiClient = apiClient
         self.tokenProvider = tokenProvider
     }
 
-    public func fetchAll(speciesId: Int?) async throws -> [Observation] {
+    public func fetchAll(speciesId: Int?) async throws -> [BirdObservation] {
         let token = await tokenProvider()
         let dtos: [ObservationDTO] = try await apiClient.request(
             ObservationEndpoint.fetchAll(speciesId: speciesId),
@@ -19,7 +19,7 @@ public final class ObservationRepositoryImpl: ObservationRepository {
         return dtos.map { $0.toDomain() }
     }
 
-    public func fetch(id: String) async throws -> Observation {
+    public func fetch(id: String) async throws -> BirdObservation {
         let token = await tokenProvider()
         let dto: ObservationDTO = try await apiClient.request(
             ObservationEndpoint.fetch(id: id),
@@ -28,7 +28,7 @@ public final class ObservationRepositoryImpl: ObservationRepository {
         return dto.toDomain()
     }
 
-    public func create(_ input: CreateObservationInput) async throws -> Observation {
+    public func create(_ input: CreateObservationInput) async throws -> BirdObservation {
         let token = await tokenProvider()
         let requestDTO = CreateObservationRequestDTO(from: input)
         let body = try JSONEncoder().encode(requestDTO)

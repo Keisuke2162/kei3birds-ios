@@ -6,11 +6,17 @@ struct MapView: View {
     @State var viewModel: MapViewModel
     @State private var showGBIFSheet = false
     @State private var showMySheet = false
+    @State private var cameraPosition: MapCameraPosition = .region(
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 35.6812, longitude: 139.7671),
+            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        )
+    )
 
     var body: some View {
         NavigationStack {
             ZStack(alignment: .top) {
-                Map(position: $viewModel.cameraPosition) {
+                Map(position: $cameraPosition) {
                     if viewModel.selectedLayer == .gbif || viewModel.selectedLayer == .both {
                         ForEach(viewModel.gbifPoints) { point in
                             Annotation(point.nameJa, coordinate: CLLocationCoordinate2D(latitude: point.lat, longitude: point.lng)) {

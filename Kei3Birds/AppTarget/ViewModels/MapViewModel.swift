@@ -1,3 +1,4 @@
+import Observation
 import Foundation
 import MapKit
 import Domain
@@ -22,13 +23,7 @@ final class MapViewModel {
     var selectedGBIFPoint: GBIFMapPoint?
     var selectedMyPoint: MyMapPoint?
 
-    var cameraPosition: MapCameraPosition = .region(
-        MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 35.6812, longitude: 139.7671),
-            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-        )
-    )
-
+    @ObservationIgnored
     private var debounceTask: Task<Void, Never>?
 
     init(fetchMapPointsUseCase: FetchMapPointsUseCase) {

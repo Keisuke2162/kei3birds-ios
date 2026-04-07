@@ -1,6 +1,8 @@
 import Foundation
 
-public struct Observation: Sendable, Identifiable {
+public struct BirdObservation: Sendable, Identifiable, Hashable {
+    public static func == (lhs: BirdObservation, rhs: BirdObservation) -> Bool { lhs.id == rhs.id }
+    public func hash(into hasher: inout Hasher) { hasher.combine(id) }
     public let id: String
     public let userId: String?
     public let speciesId: Int?

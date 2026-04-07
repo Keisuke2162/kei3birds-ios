@@ -1,3 +1,4 @@
+import Observation
 import Foundation
 import Domain
 import UseCase
@@ -9,7 +10,7 @@ final class EncyclopediaViewModel {
     private let fetchObservationsUseCase: FetchObservationsUseCase
 
     var allBirds: [Bird] = []
-    var observations: [Observation] = []
+    var observations: [BirdObservation] = []
     var searchText = ""
     var isLoading = false
     var errorMessage: String?
