@@ -37,6 +37,10 @@ public final class SupabaseAuthClient: AuthRepository {
         try? await client.auth.session.accessToken
     }
 
+    public func getUserId() async -> String? {
+        try? await client.auth.session.user.id.uuidString
+    }
+
     private func fetchUserProfile(userId: String) async -> AppUser? {
         struct UserRow: Decodable {
             let id: String

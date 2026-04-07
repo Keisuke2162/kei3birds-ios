@@ -22,12 +22,12 @@ final class AuthViewModel {
         defer { isLoading = false }
         do {
             let user = try await authUseCase.restoreSession()
+            userId = await authUseCase.getUserId()
+            isAuthenticated = true
             if let user {
                 currentUser = user
-                isAuthenticated = true
             } else {
                 needsUsername = true
-                isAuthenticated = true
             }
         } catch {
             isAuthenticated = false
@@ -39,6 +39,8 @@ final class AuthViewModel {
         do {
             let user = try await authUseCase.signInWithGoogle(idToken: idToken, accessToken: accessToken)
             isAuthenticated = true
+            // セッションからuserIdを取得（setUsernameで必要）
+            userId = await authUseCase.getUserId()
             if let user {
                 currentUser = user
             } else {
