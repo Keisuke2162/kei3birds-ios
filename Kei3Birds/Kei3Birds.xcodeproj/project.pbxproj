@@ -6,341 +6,538 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		04DB3A73A655B2329A526254 /* IdentifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85860FF675DF2EB33D0AA5CD /* IdentifyViewModel.swift */; };
+		10854C90960560EBB04DCD58 /* BirdPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612155D7A7AC88B73FAA1568 /* BirdPinView.swift */; };
+		2A9DFCAF134A1254FE4DB9CC /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30DF7F7F37EC9598D98737 /* DependencyContainer.swift */; };
+		2C90CAFDF5353E650A18138E /* Infra in Frameworks */ = {isa = PBXBuildFile; productRef = 387A58BA419969A4EAC94FF7 /* Infra */; };
+		2E225951127D1DFA2416ACCE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DDF313AF48CC522BE09AF /* ProfileView.swift */; };
+		3413DBB59747FFBD30AD3C46 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = A66C9B95CBCE98EA8ED59ECF /* Domain */; };
+		3FE730908D3EC98D9299DF4E /* Kei3BirdsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74D4669C7A138B6DADB08E /* Kei3BirdsApp.swift */; };
+		4CE5E9F89986929E61F6B32B /* UseCase in Frameworks */ = {isa = PBXBuildFile; productRef = BC3C08904B28E9E287579CA6 /* UseCase */; };
+		5A7FC8A77A75A1C63ABA4FCE /* BirdDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FEB368CF6AB4719FF2A9A /* BirdDetailView.swift */; };
+		5E1C5E4A93765B3ACF91AFD1 /* Kei3BirdsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37CA5CEB412415584A75A0F /* Kei3BirdsTests.swift */; };
+		652C81BF9E2AEA604EC63B5D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9843E9E4DF8912CB0E816C0 /* AuthViewModel.swift */; };
+		663549AAF4EB9AB31420BAA7 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E362784C3CE70FCDA86A /* CameraView.swift */; };
+		77AB3CF645DA0A4CE9312210 /* PhotoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B24E789B3C1413EB9A0FD2 /* PhotoCardViewModel.swift */; };
+		8560B2AB397E0FE02611F74B /* BirdCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2418E36440BEBE082EF768 /* BirdCardView.swift */; };
+		8A37BBDDBAD5EF7B9AAF7114 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7ECFAB114964CCD0A03BA /* LoadingView.swift */; };
+		905916E55445327D9DDC7C0E /* Kei3BirdsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818944172C92749DD1D54821 /* Kei3BirdsUITests.swift */; };
+		998C96C6AC945CA1D5549F76 /* EncyclopediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237449BD80E34DE2C090568 /* EncyclopediaViewModel.swift */; };
+		9D929361BAF0DD19B9791419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987D31AEA05B7ACBBA9BA0AF /* Assets.xcassets */; };
+		9FF782D0630C8FF95F4886EF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E324B08F8FDEA38A9B77DD /* MapView.swift */; };
+		A108F75A4C4017BDF5553EC8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F97399D68BBFFEDD9458C1 /* ProfileViewModel.swift */; };
+		A4AF44B5ABA223D3E915C972 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B979E5479896BC8C59E01CB9 /* GoogleSignIn */; };
+		B3DAB378BB50CA808442067C /* UsernameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB8180837E51070C2AB4E8 /* UsernameSetupView.swift */; };
+		CA4DE6E5D12CE3D1D3924424 /* PhotoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFA499E0D7F28704391EF9 /* PhotoCardView.swift */; };
+		CF1F28BCC2029BF860072962 /* BirdDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEA5BB4056B7A436CE07D2 /* BirdDetailViewModel.swift */; };
+		D2E96A8785B7FACBD3318943 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685DF67A17087337DB40044B /* MapViewModel.swift */; };
+		DE9B3DCE82115AB118A072D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C4CC8859BC2C750BA461F /* LoginView.swift */; };
+		EB947113E687186FC6C1E331 /* EncyclopediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC272BCC997E0818B4EBA93 /* EncyclopediaView.swift */; };
+		EC567AA1F5E4FE0B52294647 /* Kei3BirdsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57826862FACD6226BF4B1200 /* Kei3BirdsUITestsLaunchTests.swift */; };
+		EDA05E4FD19D8CF4DF9B5B8B /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353C10DF77862A41FBB5A58 /* ImagePickerView.swift */; };
+		FB1925EBD30DB2ECBA64B41E /* EXIFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269AE77A00287879C5AA1BD /* EXIFHelper.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		E7DF489D2F8561EA00C26A41 /* PBXContainerItemProxy */ = {
+		2209E0D7453BC62623978516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E7DF48872F8561E900C26A41 /* Project object */;
+			containerPortal = 0B1ABC2C18B11B3D108A780F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E7DF488E2F8561E900C26A41;
+			remoteGlobalIDString = E987C89471E190BEDC607BD8;
 			remoteInfo = Kei3Birds;
 		};
-		E7DF48A72F8561EA00C26A41 /* PBXContainerItemProxy */ = {
+		2B375305FDFA95C90EA0A00E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E7DF48872F8561E900C26A41 /* Project object */;
+			containerPortal = 0B1ABC2C18B11B3D108A780F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E7DF488E2F8561E900C26A41;
+			remoteGlobalIDString = E987C89471E190BEDC607BD8;
 			remoteInfo = Kei3Birds;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E7DF488F2F8561E900C26A41 /* Kei3Birds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kei3Birds.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7DF489C2F8561EA00C26A41 /* Kei3BirdsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kei3BirdsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7DF48A62F8561EA00C26A41 /* Kei3BirdsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kei3BirdsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0269AE77A00287879C5AA1BD /* EXIFHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIFHelper.swift; sourceTree = "<group>"; };
+		0353C10DF77862A41FBB5A58 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		07FE529D838B2E5AF86B40F9 /* Kei3BirdsUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = Kei3BirdsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16DC760AE26768783D6BFE34 /* UseCase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UseCase; path = Packages/UseCase; sourceTree = SOURCE_ROOT; };
+		28B24E789B3C1413EB9A0FD2 /* PhotoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardViewModel.swift; sourceTree = "<group>"; };
+		4DC272BCC997E0818B4EBA93 /* EncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaView.swift; sourceTree = "<group>"; };
+		57826862FACD6226BF4B1200 /* Kei3BirdsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kei3BirdsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A30DF7F7F37EC9598D98737 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		5F5DDF313AF48CC522BE09AF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		612155D7A7AC88B73FAA1568 /* BirdPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdPinView.swift; sourceTree = "<group>"; };
+		685DF67A17087337DB40044B /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		818944172C92749DD1D54821 /* Kei3BirdsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kei3BirdsUITests.swift; sourceTree = "<group>"; };
+		85860FF675DF2EB33D0AA5CD /* IdentifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyViewModel.swift; sourceTree = "<group>"; };
+		883C4CC8859BC2C750BA461F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		987D31AEA05B7ACBBA9BA0AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98E324B08F8FDEA38A9B77DD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9C2418E36440BEBE082EF768 /* BirdCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCardView.swift; sourceTree = "<group>"; };
+		A37CA5CEB412415584A75A0F /* Kei3BirdsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kei3BirdsTests.swift; sourceTree = "<group>"; };
+		A5DB8180837E51070C2AB4E8 /* UsernameSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameSetupView.swift; sourceTree = "<group>"; };
+		A7DFA499E0D7F28704391EF9 /* PhotoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardView.swift; sourceTree = "<group>"; };
+		B5FEA5BB4056B7A436CE07D2 /* BirdDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDetailViewModel.swift; sourceTree = "<group>"; };
+		B6F97399D68BBFFEDD9458C1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		B9843E9E4DF8912CB0E816C0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CE58B9F6473587D6CE5CDE99 /* Infra */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Infra; path = Packages/Infra; sourceTree = SOURCE_ROOT; };
+		D237449BD80E34DE2C090568 /* EncyclopediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaViewModel.swift; sourceTree = "<group>"; };
+		E1B0EAB92A845AD3C9C0ED3A /* Kei3Birds.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kei3Birds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9A7ECFAB114964CCD0A03BA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F56BBC76ED35039EDDFF0392 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Domain; path = Packages/Domain; sourceTree = SOURCE_ROOT; };
+		F9FB05EFDCABA631FA05AB41 /* Kei3BirdsTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = Kei3BirdsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD1E362784C3CE70FCDA86A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		FB7FEB368CF6AB4719FF2A9A /* BirdDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDetailView.swift; sourceTree = "<group>"; };
+		FE74D4669C7A138B6DADB08E /* Kei3BirdsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kei3BirdsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E7DF48912F8561E900C26A41 /* Kei3Birds */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Kei3Birds;
-			sourceTree = "<group>";
-		};
-		E7DF489F2F8561EA00C26A41 /* Kei3BirdsTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Kei3BirdsTests;
-			sourceTree = "<group>";
-		};
-		E7DF48A92F8561EA00C26A41 /* Kei3BirdsUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Kei3BirdsUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		E7DF488C2F8561E900C26A41 /* Frameworks */ = {
+		3EF29A4AB1EB84881B13E793 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7DF48992F8561EA00C26A41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7DF48A32F8561EA00C26A41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3413DBB59747FFBD30AD3C46 /* Domain in Frameworks */,
+				4CE5E9F89986929E61F6B32B /* UseCase in Frameworks */,
+				2C90CAFDF5353E650A18138E /* Infra in Frameworks */,
+				A4AF44B5ABA223D3E915C972 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E7DF48862F8561E900C26A41 = {
+		40C82F31A935EBC9462C0EDA /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				E7DF48912F8561E900C26A41 /* Kei3Birds */,
-				E7DF489F2F8561EA00C26A41 /* Kei3BirdsTests */,
-				E7DF48A92F8561EA00C26A41 /* Kei3BirdsUITests */,
-				E7DF48902F8561E900C26A41 /* Products */,
+				883C4CC8859BC2C750BA461F /* LoginView.swift */,
+				A5DB8180837E51070C2AB4E8 /* UsernameSetupView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		4B373676B44A78E3E3BCBC8B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5F5DDF313AF48CC522BE09AF /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6BAB068A0B5722899E72E127 /* Encyclopedia */ = {
+			isa = PBXGroup;
+			children = (
+				FB7FEB368CF6AB4719FF2A9A /* BirdDetailView.swift */,
+				4DC272BCC997E0818B4EBA93 /* EncyclopediaView.swift */,
+			);
+			path = Encyclopedia;
+			sourceTree = "<group>";
+		};
+		70CC49F470F880CC10244F0B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F56BBC76ED35039EDDFF0392 /* Domain */,
+				CE58B9F6473587D6CE5CDE99 /* Infra */,
+				16DC760AE26768783D6BFE34 /* UseCase */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		70CEC9218DEFC09F930FC6D9 /* Kei3BirdsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A37CA5CEB412415584A75A0F /* Kei3BirdsTests.swift */,
+			);
+			path = Kei3BirdsTests;
+			sourceTree = "<group>";
+		};
+		7BB87EEBF1720C6D8049C2D5 /* Kei3BirdsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				818944172C92749DD1D54821 /* Kei3BirdsUITests.swift */,
+				57826862FACD6226BF4B1200 /* Kei3BirdsUITestsLaunchTests.swift */,
+			);
+			path = Kei3BirdsUITests;
+			sourceTree = "<group>";
+		};
+		8B61C706294CA0C27CA768C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1B0EAB92A845AD3C9C0ED3A /* Kei3Birds.app */,
+				F9FB05EFDCABA631FA05AB41 /* Kei3BirdsTests.xctest */,
+				07FE529D838B2E5AF86B40F9 /* Kei3BirdsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DB816DB415851A5351517A0 = {
+			isa = PBXGroup;
+			children = (
+				BC17DD819E788B2F05CCDF4D /* AppTarget */,
+				70CEC9218DEFC09F930FC6D9 /* Kei3BirdsTests */,
+				7BB87EEBF1720C6D8049C2D5 /* Kei3BirdsUITests */,
+				70CC49F470F880CC10244F0B /* Packages */,
+				8B61C706294CA0C27CA768C7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E7DF48902F8561E900C26A41 /* Products */ = {
+		A4FFB2B88CA4C166243CC36A /* App */ = {
 			isa = PBXGroup;
 			children = (
-				E7DF488F2F8561E900C26A41 /* Kei3Birds.app */,
-				E7DF489C2F8561EA00C26A41 /* Kei3BirdsTests.xctest */,
-				E7DF48A62F8561EA00C26A41 /* Kei3BirdsUITests.xctest */,
+				FE74D4669C7A138B6DADB08E /* Kei3BirdsApp.swift */,
 			);
-			name = Products;
+			path = App;
+			sourceTree = "<group>";
+		};
+		A9293C1BEE4CBFAF8886F20D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				987D31AEA05B7ACBBA9BA0AF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA0EC3038880777A4072E0CF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9C2418E36440BEBE082EF768 /* BirdCardView.swift */,
+				612155D7A7AC88B73FAA1568 /* BirdPinView.swift */,
+				E9A7ECFAB114964CCD0A03BA /* LoadingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AF1CFC52DF5DC6E05C9E052D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				5A30DF7F7F37EC9598D98737 /* DependencyContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		B52F8E1E0CC7A5292EE6B71A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0269AE77A00287879C5AA1BD /* EXIFHelper.swift */,
+				0353C10DF77862A41FBB5A58 /* ImagePickerView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		BAB7569D698F815F6BA4BA78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40C82F31A935EBC9462C0EDA /* Auth */,
+				E2181728C0AA244F2FBFD696 /* Camera */,
+				AA0EC3038880777A4072E0CF /* Components */,
+				6BAB068A0B5722899E72E127 /* Encyclopedia */,
+				DFD8F21D95D3F7A9897DBE5E /* Map */,
+				FA0B9E3AD5A0DD252DD718CE /* PhotoCard */,
+				4B373676B44A78E3E3BCBC8B /* Profile */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BC17DD819E788B2F05CCDF4D /* AppTarget */ = {
+			isa = PBXGroup;
+			children = (
+				A4FFB2B88CA4C166243CC36A /* App */,
+				AF1CFC52DF5DC6E05C9E052D /* DI */,
+				A9293C1BEE4CBFAF8886F20D /* Resources */,
+				B52F8E1E0CC7A5292EE6B71A /* Utility */,
+				D425924FAC628E8B6490C478 /* ViewModels */,
+				BAB7569D698F815F6BA4BA78 /* Views */,
+			);
+			path = AppTarget;
+			sourceTree = "<group>";
+		};
+		D425924FAC628E8B6490C478 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B9843E9E4DF8912CB0E816C0 /* AuthViewModel.swift */,
+				B5FEA5BB4056B7A436CE07D2 /* BirdDetailViewModel.swift */,
+				D237449BD80E34DE2C090568 /* EncyclopediaViewModel.swift */,
+				85860FF675DF2EB33D0AA5CD /* IdentifyViewModel.swift */,
+				685DF67A17087337DB40044B /* MapViewModel.swift */,
+				28B24E789B3C1413EB9A0FD2 /* PhotoCardViewModel.swift */,
+				B6F97399D68BBFFEDD9458C1 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DFD8F21D95D3F7A9897DBE5E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				98E324B08F8FDEA38A9B77DD /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		E2181728C0AA244F2FBFD696 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				FAD1E362784C3CE70FCDA86A /* CameraView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		FA0B9E3AD5A0DD252DD718CE /* PhotoCard */ = {
+			isa = PBXGroup;
+			children = (
+				A7DFA499E0D7F28704391EF9 /* PhotoCardView.swift */,
+			);
+			path = PhotoCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E7DF488E2F8561E900C26A41 /* Kei3Birds */ = {
+		5DF781BCB10792F61D2E2440 /* Kei3BirdsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7DF48B02F8561EA00C26A41 /* Build configuration list for PBXNativeTarget "Kei3Birds" */;
+			buildConfigurationList = 5ADB7533725E9428AF730B2F /* Build configuration list for PBXNativeTarget "Kei3BirdsTests" */;
 			buildPhases = (
-				E7DF488B2F8561E900C26A41 /* Sources */,
-				E7DF488C2F8561E900C26A41 /* Frameworks */,
-				E7DF488D2F8561E900C26A41 /* Resources */,
+				4C159DE63DDEB8DF1BF18ECA /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				E7DF48912F8561E900C26A41 /* Kei3Birds */,
-			);
-			name = Kei3Birds;
-			packageProductDependencies = (
-			);
-			productName = Kei3Birds;
-			productReference = E7DF488F2F8561E900C26A41 /* Kei3Birds.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E7DF489B2F8561EA00C26A41 /* Kei3BirdsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7DF48B32F8561EA00C26A41 /* Build configuration list for PBXNativeTarget "Kei3BirdsTests" */;
-			buildPhases = (
-				E7DF48982F8561EA00C26A41 /* Sources */,
-				E7DF48992F8561EA00C26A41 /* Frameworks */,
-				E7DF489A2F8561EA00C26A41 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E7DF489E2F8561EA00C26A41 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				E7DF489F2F8561EA00C26A41 /* Kei3BirdsTests */,
+				DB23CEA3B9DD5F1E7785C531 /* PBXTargetDependency */,
 			);
 			name = Kei3BirdsTests;
 			packageProductDependencies = (
 			);
 			productName = Kei3BirdsTests;
-			productReference = E7DF489C2F8561EA00C26A41 /* Kei3BirdsTests.xctest */;
+			productReference = F9FB05EFDCABA631FA05AB41 /* Kei3BirdsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E7DF48A52F8561EA00C26A41 /* Kei3BirdsUITests */ = {
+		C5CA42406FADB2F295CA53A7 /* Kei3BirdsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7DF48B62F8561EA00C26A41 /* Build configuration list for PBXNativeTarget "Kei3BirdsUITests" */;
+			buildConfigurationList = 2ADC1D25FEA0FB420DF93A07 /* Build configuration list for PBXNativeTarget "Kei3BirdsUITests" */;
 			buildPhases = (
-				E7DF48A22F8561EA00C26A41 /* Sources */,
-				E7DF48A32F8561EA00C26A41 /* Frameworks */,
-				E7DF48A42F8561EA00C26A41 /* Resources */,
+				CE3D9408EA22783B9F140A54 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E7DF48A82F8561EA00C26A41 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				E7DF48A92F8561EA00C26A41 /* Kei3BirdsUITests */,
+				C5C3E45297E60EF34306C1FC /* PBXTargetDependency */,
 			);
 			name = Kei3BirdsUITests;
 			packageProductDependencies = (
 			);
 			productName = Kei3BirdsUITests;
-			productReference = E7DF48A62F8561EA00C26A41 /* Kei3BirdsUITests.xctest */;
+			productReference = 07FE529D838B2E5AF86B40F9 /* Kei3BirdsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E987C89471E190BEDC607BD8 /* Kei3Birds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D1BC3ECE0005790D72A78F4 /* Build configuration list for PBXNativeTarget "Kei3Birds" */;
+			buildPhases = (
+				4B8A7E1B07076F01776ADE9F /* Sources */,
+				C4917CB476E007C8F72B548C /* Resources */,
+				3EF29A4AB1EB84881B13E793 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kei3Birds;
+			packageProductDependencies = (
+				A66C9B95CBCE98EA8ED59ECF /* Domain */,
+				BC3C08904B28E9E287579CA6 /* UseCase */,
+				387A58BA419969A4EAC94FF7 /* Infra */,
+				B979E5479896BC8C59E01CB9 /* GoogleSignIn */,
+			);
+			productName = Kei3Birds;
+			productReference = E1B0EAB92A845AD3C9C0ED3A /* Kei3Birds.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E7DF48872F8561E900C26A41 /* Project object */ = {
+		0B1ABC2C18B11B3D108A780F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2620;
-				LastUpgradeCheck = 2620;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					E7DF488E2F8561E900C26A41 = {
-						CreatedOnToolsVersion = 26.2;
+					5DF781BCB10792F61D2E2440 = {
+						DevelopmentTeam = D2B3JPR4TJ;
 					};
-					E7DF489B2F8561EA00C26A41 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = E7DF488E2F8561E900C26A41;
+					C5CA42406FADB2F295CA53A7 = {
+						DevelopmentTeam = D2B3JPR4TJ;
+						TestTargetID = E987C89471E190BEDC607BD8;
 					};
-					E7DF48A52F8561EA00C26A41 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = E7DF488E2F8561E900C26A41;
+					E987C89471E190BEDC607BD8 = {
+						DevelopmentTeam = D2B3JPR4TJ;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = E7DF488A2F8561E900C26A41 /* Build configuration list for PBXProject "Kei3Birds" */;
+			buildConfigurationList = B0292FE76B9946345F5FE1FA /* Build configuration list for PBXProject "Kei3Birds" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = E7DF48862F8561E900C26A41;
+			mainGroup = 9DB816DB415851A5351517A0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E9EDD7FFB2410E8B6031B10D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				1D65A81311ADCF58CD3B8AC7 /* XCLocalSwiftPackageReference "Packages/Domain" */,
+				7E0898299707E8FED97F15A5 /* XCLocalSwiftPackageReference "Packages/Infra" */,
+				90CBBD0E609EC49080397340 /* XCLocalSwiftPackageReference "Packages/UseCase" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = E7DF48902F8561E900C26A41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E7DF488E2F8561E900C26A41 /* Kei3Birds */,
-				E7DF489B2F8561EA00C26A41 /* Kei3BirdsTests */,
-				E7DF48A52F8561EA00C26A41 /* Kei3BirdsUITests */,
+				E987C89471E190BEDC607BD8 /* Kei3Birds */,
+				5DF781BCB10792F61D2E2440 /* Kei3BirdsTests */,
+				C5CA42406FADB2F295CA53A7 /* Kei3BirdsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E7DF488D2F8561E900C26A41 /* Resources */ = {
+		C4917CB476E007C8F72B548C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7DF489A2F8561EA00C26A41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7DF48A42F8561EA00C26A41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9D929361BAF0DD19B9791419 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E7DF488B2F8561E900C26A41 /* Sources */ = {
+		4B8A7E1B07076F01776ADE9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652C81BF9E2AEA604EC63B5D /* AuthViewModel.swift in Sources */,
+				8560B2AB397E0FE02611F74B /* BirdCardView.swift in Sources */,
+				5A7FC8A77A75A1C63ABA4FCE /* BirdDetailView.swift in Sources */,
+				CF1F28BCC2029BF860072962 /* BirdDetailViewModel.swift in Sources */,
+				10854C90960560EBB04DCD58 /* BirdPinView.swift in Sources */,
+				663549AAF4EB9AB31420BAA7 /* CameraView.swift in Sources */,
+				2A9DFCAF134A1254FE4DB9CC /* DependencyContainer.swift in Sources */,
+				FB1925EBD30DB2ECBA64B41E /* EXIFHelper.swift in Sources */,
+				EB947113E687186FC6C1E331 /* EncyclopediaView.swift in Sources */,
+				998C96C6AC945CA1D5549F76 /* EncyclopediaViewModel.swift in Sources */,
+				04DB3A73A655B2329A526254 /* IdentifyViewModel.swift in Sources */,
+				EDA05E4FD19D8CF4DF9B5B8B /* ImagePickerView.swift in Sources */,
+				3FE730908D3EC98D9299DF4E /* Kei3BirdsApp.swift in Sources */,
+				8A37BBDDBAD5EF7B9AAF7114 /* LoadingView.swift in Sources */,
+				DE9B3DCE82115AB118A072D5 /* LoginView.swift in Sources */,
+				9FF782D0630C8FF95F4886EF /* MapView.swift in Sources */,
+				D2E96A8785B7FACBD3318943 /* MapViewModel.swift in Sources */,
+				CA4DE6E5D12CE3D1D3924424 /* PhotoCardView.swift in Sources */,
+				77AB3CF645DA0A4CE9312210 /* PhotoCardViewModel.swift in Sources */,
+				2E225951127D1DFA2416ACCE /* ProfileView.swift in Sources */,
+				A108F75A4C4017BDF5553EC8 /* ProfileViewModel.swift in Sources */,
+				B3DAB378BB50CA808442067C /* UsernameSetupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7DF48982F8561EA00C26A41 /* Sources */ = {
+		4C159DE63DDEB8DF1BF18ECA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1C5E4A93765B3ACF91AFD1 /* Kei3BirdsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7DF48A22F8561EA00C26A41 /* Sources */ = {
+		CE3D9408EA22783B9F140A54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905916E55445327D9DDC7C0E /* Kei3BirdsUITests.swift in Sources */,
+				EC567AA1F5E4FE0B52294647 /* Kei3BirdsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E7DF489E2F8561EA00C26A41 /* PBXTargetDependency */ = {
+		C5C3E45297E60EF34306C1FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E7DF488E2F8561E900C26A41 /* Kei3Birds */;
-			targetProxy = E7DF489D2F8561EA00C26A41 /* PBXContainerItemProxy */;
+			target = E987C89471E190BEDC607BD8 /* Kei3Birds */;
+			targetProxy = 2B375305FDFA95C90EA0A00E /* PBXContainerItemProxy */;
 		};
-		E7DF48A82F8561EA00C26A41 /* PBXTargetDependency */ = {
+		DB23CEA3B9DD5F1E7785C531 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E7DF488E2F8561E900C26A41 /* Kei3Birds */;
-			targetProxy = E7DF48A72F8561EA00C26A41 /* PBXContainerItemProxy */;
+			target = E987C89471E190BEDC607BD8 /* Kei3Birds */;
+			targetProxy = 2209E0D7453BC62623978516 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		E7DF48AE2F8561EA00C26A41 /* Debug */ = {
+		159FC57F0FB21BB141C1D50D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3BirdsUITests;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kei3Birds;
 			};
 			name = Debug;
 		};
-		E7DF48AF2F8561EA00C26A41 /* Release */ = {
+		1F34755752AC07D837B565E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = D2B3JPR4TJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3BirdsUITests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kei3Birds;
+			};
+			name = Release;
+		};
+		378BAF1226C68DF2AD6DD359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = D2B3JPR4TJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3BirdsTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kei3Birds.app/Kei3Birds";
+			};
+			name = Release;
+		};
+		64F60216FBA7C3B492E0D4E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -368,11 +565,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = D2B3JPR4TJ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -380,33 +575,33 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		E7DF48B12F8561EA00C26A41 /* Debug */ = {
+		698C60EBB087FFE68BC9CA97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "鳥の写真を撮影するためにカメラを使用します";
+				INFOPLIST_KEY_NSCameraUsageDescription = "鳥の写真を撮影するためにカメラを使用します";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "撮影場所を記録するために位置情報を使用します";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "撮影した鳥の写真を選択するためにフォトライブラリを使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,34 +609,28 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3Birds;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Release;
 		};
-		E7DF48B22F8561EA00C26A41 /* Release */ = {
+		8FA42F17052BB048483EA015 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "鳥の写真を撮影するためにカメラを使用します";
+				INFOPLIST_KEY_NSCameraUsageDescription = "鳥の写真を撮影するためにカメラを使用します";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "撮影場所を記録するために位置情報を使用します";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "撮影した鳥の写真を選択するためにフォトライブラリを使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,141 +638,180 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3Birds;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		E7DF48B42F8561EA00C26A41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3BirdsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kei3Birds.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kei3Birds";
 			};
 			name = Debug;
 		};
-		E7DF48B52F8561EA00C26A41 /* Release */ = {
+		AF6664EE335BC927A8A21D79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3BirdsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kei3Birds.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kei3Birds";
-			};
-			name = Release;
-		};
-		E7DF48B72F8561EA00C26A41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3BirdsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Kei3Birds;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kei3Birds.app/Kei3Birds";
 			};
 			name = Debug;
 		};
-		E7DF48B82F8561EA00C26A41 /* Release */ = {
+		D7B2518D2E0786CD5DC5237E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kei3islands.Kei3BirdsUITests;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Kei3Birds;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E7DF488A2F8561E900C26A41 /* Build configuration list for PBXProject "Kei3Birds" */ = {
+		2ADC1D25FEA0FB420DF93A07 /* Build configuration list for PBXNativeTarget "Kei3BirdsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7DF48AE2F8561EA00C26A41 /* Debug */,
-				E7DF48AF2F8561EA00C26A41 /* Release */,
+				159FC57F0FB21BB141C1D50D /* Debug */,
+				1F34755752AC07D837B565E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		E7DF48B02F8561EA00C26A41 /* Build configuration list for PBXNativeTarget "Kei3Birds" */ = {
+		5ADB7533725E9428AF730B2F /* Build configuration list for PBXNativeTarget "Kei3BirdsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7DF48B12F8561EA00C26A41 /* Debug */,
-				E7DF48B22F8561EA00C26A41 /* Release */,
+				AF6664EE335BC927A8A21D79 /* Debug */,
+				378BAF1226C68DF2AD6DD359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		E7DF48B32F8561EA00C26A41 /* Build configuration list for PBXNativeTarget "Kei3BirdsTests" */ = {
+		9D1BC3ECE0005790D72A78F4 /* Build configuration list for PBXNativeTarget "Kei3Birds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7DF48B42F8561EA00C26A41 /* Debug */,
-				E7DF48B52F8561EA00C26A41 /* Release */,
+				8FA42F17052BB048483EA015 /* Debug */,
+				698C60EBB087FFE68BC9CA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		E7DF48B62F8561EA00C26A41 /* Build configuration list for PBXNativeTarget "Kei3BirdsUITests" */ = {
+		B0292FE76B9946345F5FE1FA /* Build configuration list for PBXProject "Kei3Birds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7DF48B72F8561EA00C26A41 /* Debug */,
-				E7DF48B82F8561EA00C26A41 /* Release */,
+				D7B2518D2E0786CD5DC5237E /* Debug */,
+				64F60216FBA7C3B492E0D4E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1D65A81311ADCF58CD3B8AC7 /* XCLocalSwiftPackageReference "Packages/Domain" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Domain;
+		};
+		7E0898299707E8FED97F15A5 /* XCLocalSwiftPackageReference "Packages/Infra" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Infra;
+		};
+		90CBBD0E609EC49080397340 /* XCLocalSwiftPackageReference "Packages/UseCase" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/UseCase;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9EDD7FFB2410E8B6031B10D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		387A58BA419969A4EAC94FF7 /* Infra */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Infra;
+		};
+		A66C9B95CBCE98EA8ED59ECF /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		B979E5479896BC8C59E01CB9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9EDD7FFB2410E8B6031B10D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		BC3C08904B28E9E287579CA6 /* UseCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = E7DF48872F8561E900C26A41 /* Project object */;
+	rootObject = 0B1ABC2C18B11B3D108A780F /* Project object */;
 }

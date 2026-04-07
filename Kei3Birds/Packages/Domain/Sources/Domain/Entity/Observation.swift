@@ -1,0 +1,72 @@
+import Foundation
+
+public struct Observation: Sendable, Identifiable {
+    public let id: String
+    public let userId: String?
+    public let speciesId: Int?
+    public let photoUrl: String
+    public let takenAt: String
+    public let lat: Double?
+    public let lng: Double?
+    public let locationName: String?
+    public let aiCandidates: [AICandidate]?
+    public let notes: String?
+
+    public init(id: String, userId: String?, speciesId: Int?, photoUrl: String, takenAt: String, lat: Double?, lng: Double?, locationName: String?, aiCandidates: [AICandidate]?, notes: String?) {
+        self.id = id
+        self.userId = userId
+        self.speciesId = speciesId
+        self.photoUrl = photoUrl
+        self.takenAt = takenAt
+        self.lat = lat
+        self.lng = lng
+        self.locationName = locationName
+        self.aiCandidates = aiCandidates
+        self.notes = notes
+    }
+}
+
+public struct CreateObservationInput: Sendable {
+    public let speciesId: Int
+    public let photoUrl: String
+    public let takenAt: String
+    public let lat: Double
+    public let lng: Double
+    public let locationName: String
+    public let notes: String?
+
+    public init(speciesId: Int, photoUrl: String, takenAt: String, lat: Double, lng: Double, locationName: String, notes: String?) {
+        self.speciesId = speciesId
+        self.photoUrl = photoUrl
+        self.takenAt = takenAt
+        self.lat = lat
+        self.lng = lng
+        self.locationName = locationName
+        self.notes = notes
+    }
+}
+
+public struct AICandidate: Sendable, Identifiable {
+    public var id: Int { speciesId }
+    public let speciesId: Int
+    public let nameJa: String
+    public let scientificName: String
+    public let confidence: Double
+
+    public init(speciesId: Int, nameJa: String, scientificName: String, confidence: Double) {
+        self.speciesId = speciesId
+        self.nameJa = nameJa
+        self.scientificName = scientificName
+        self.confidence = confidence
+    }
+}
+
+public struct IdentifyResult: Sendable {
+    public let identified: Bool
+    public let candidates: [AICandidate]
+
+    public init(identified: Bool, candidates: [AICandidate]) {
+        self.identified = identified
+        self.candidates = candidates
+    }
+}

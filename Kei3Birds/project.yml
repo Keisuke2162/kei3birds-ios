@@ -1,0 +1,83 @@
+name: Kei3Birds
+options:
+  xcodeVersion: "16.0"
+  deploymentTarget:
+    iOS: "17.0"
+  bundleIdPrefix: com.kei3islands
+
+packages:
+  Domain:
+    path: Packages/Domain
+  UseCase:
+    path: Packages/UseCase
+  Infra:
+    path: Packages/Infra
+  GoogleSignIn:
+    url: https://github.com/google/GoogleSignIn-iOS
+    from: "8.0.0"
+
+targets:
+  Kei3Birds:
+    type: application
+    platform: iOS
+    sources:
+      - path: AppTarget
+        excludes:
+          - "**/.DS_Store"
+    resources:
+      - path: AppTarget/Resources
+    dependencies:
+      - package: Domain
+      - package: UseCase
+      - package: Infra
+      - package: GoogleSignIn
+        product: GoogleSignIn
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kei3islands.Kei3Birds
+        DEVELOPMENT_TEAM: D2B3JPR4TJ
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_NSCameraUsageDescription: "鳥の写真を撮影するためにカメラを使用します"
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "撮影した鳥の写真を選択するためにフォトライブラリを使用します"
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "撮影場所を記録するために位置情報を使用します"
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Automatic
+
+  Kei3BirdsTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Kei3BirdsTests
+    dependencies:
+      - target: Kei3Birds
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kei3islands.Kei3BirdsTests
+        DEVELOPMENT_TEAM: D2B3JPR4TJ
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+
+  Kei3BirdsUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: Kei3BirdsUITests
+    dependencies:
+      - target: Kei3Birds
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kei3islands.Kei3BirdsUITests
+        DEVELOPMENT_TEAM: D2B3JPR4TJ
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
