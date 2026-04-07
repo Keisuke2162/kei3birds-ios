@@ -4,4 +4,5 @@ public protocol AuthRepository: Sendable {
     func setUsername(_ username: String, userId: String) async throws -> AppUser
     func signOut() async throws
     func getAccessToken() async -> String?
+    func getUserId() async -> String?
 }

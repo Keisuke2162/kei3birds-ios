@@ -22,4 +22,8 @@ public final class AuthUseCase: Sendable {
     public func signOut() async throws {
         try await repository.signOut()
     }
+
+    public func getUserId() async -> String? {
+        await repository.getUserId()
+    }
 }
