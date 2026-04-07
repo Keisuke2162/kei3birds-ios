@@ -60,6 +60,7 @@
 		0269AE77A00287879C5AA1BD /* EXIFHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIFHelper.swift; sourceTree = "<group>"; };
 		0353C10DF77862A41FBB5A58 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		07FE529D838B2E5AF86B40F9 /* Kei3BirdsUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = Kei3BirdsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDD1F0DD82D20E509E6E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		16DC760AE26768783D6BFE34 /* UseCase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UseCase; path = Packages/UseCase; sourceTree = SOURCE_ROOT; };
 		28B24E789B3C1413EB9A0FD2 /* PhotoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardViewModel.swift; sourceTree = "<group>"; };
 		4DC272BCC997E0818B4EBA93 /* EncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaView.swift; sourceTree = "<group>"; };
@@ -240,6 +241,7 @@
 		BC17DD819E788B2F05CCDF4D /* AppTarget */ = {
 			isa = PBXGroup;
 			children = (
+				0DDD1F0DD82D20E509E6E830 /* Info.plist */,
 				A4FFB2B88CA4C166243CC36A /* App */,
 				AF1CFC52DF5DC6E05C9E052D /* DI */,
 				A9293C1BEE4CBFAF8886F20D /* Resources */,
@@ -595,14 +597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "鳥の写真を撮影するためにカメラを使用します";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "撮影場所を記録するために位置情報を使用します";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "撮影した鳥の写真を選択するためにフォトライブラリを使用します";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = AppTarget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,14 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "鳥の写真を撮影するためにカメラを使用します";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "撮影場所を記録するために位置情報を使用します";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "撮影した鳥の写真を選択するためにフォトライブラリを使用します";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = AppTarget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
