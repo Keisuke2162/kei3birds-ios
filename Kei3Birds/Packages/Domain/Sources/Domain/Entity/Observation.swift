@@ -49,13 +49,13 @@ public struct CreateObservationInput: Sendable {
 }
 
 public struct AICandidate: Sendable, Identifiable {
-    public var id: Int { speciesId }
-    public let speciesId: Int
+    public var id: String { "\(nameJa)-\(confidence)" }
+    public let speciesId: Int?
     public let nameJa: String
     public let scientificName: String
     public let confidence: Double
 
-    public init(speciesId: Int, nameJa: String, scientificName: String, confidence: Double) {
+    public init(speciesId: Int?, nameJa: String, scientificName: String, confidence: Double) {
         self.speciesId = speciesId
         self.nameJa = nameJa
         self.scientificName = scientificName

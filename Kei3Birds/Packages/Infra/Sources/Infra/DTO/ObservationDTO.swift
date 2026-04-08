@@ -30,7 +30,7 @@ struct ObservationDTO: Codable, Sendable {
 }
 
 struct AICandidateDTO: Codable, Sendable {
-    let species_id: Int
+    let species_id: Int?
     let name_ja: String
     let scientific_name: String
     let confidence: Double

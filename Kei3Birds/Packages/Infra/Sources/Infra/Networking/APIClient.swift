@@ -75,6 +75,7 @@ public final class APIClient: Sendable {
             throw AppError.serverError(statusCode: code)
         }
 
+        print("[APIClient] upload response: \(String(data: data, encoding: .utf8) ?? "nil")")
         return try decoder.decode(T.self, from: data)
     }
 }
