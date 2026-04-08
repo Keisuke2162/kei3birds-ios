@@ -37,9 +37,6 @@ struct MainTabView: View {
 
     var body: some View {
         TabView {
-            Tab("マップ", systemImage: "map") {
-                MapView(viewModel: MapViewModel(fetchMapPointsUseCase: container.fetchMapPointsUseCase))
-            }
             Tab("図鑑", systemImage: "book") {
                 EncyclopediaView(
                     viewModel: EncyclopediaViewModel(
