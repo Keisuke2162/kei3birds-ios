@@ -20,6 +20,7 @@
 		652C81BF9E2AEA604EC63B5D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9843E9E4DF8912CB0E816C0 /* AuthViewModel.swift */; };
 		663549AAF4EB9AB31420BAA7 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E362784C3CE70FCDA86A /* CameraView.swift */; };
 		77AB3CF645DA0A4CE9312210 /* PhotoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B24E789B3C1413EB9A0FD2 /* PhotoCardViewModel.swift */; };
+		845778805BC1C35C269B7F9E /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB70E83F8039AE51D3EB9A2 /* CachedAsyncImage.swift */; };
 		8560B2AB397E0FE02611F74B /* BirdCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2418E36440BEBE082EF768 /* BirdCardView.swift */; };
 		8A37BBDDBAD5EF7B9AAF7114 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7ECFAB114964CCD0A03BA /* LoadingView.swift */; };
 		905916E55445327D9DDC7C0E /* Kei3BirdsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818944172C92749DD1D54821 /* Kei3BirdsUITests.swift */; };
@@ -62,6 +63,7 @@
 		07FE529D838B2E5AF86B40F9 /* Kei3BirdsUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = Kei3BirdsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDD1F0DD82D20E509E6E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		16DC760AE26768783D6BFE34 /* UseCase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UseCase; path = Packages/UseCase; sourceTree = SOURCE_ROOT; };
+		1DB70E83F8039AE51D3EB9A2 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		28B24E789B3C1413EB9A0FD2 /* PhotoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardViewModel.swift; sourceTree = "<group>"; };
 		4DC272BCC997E0818B4EBA93 /* EncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaView.swift; sourceTree = "<group>"; };
 		57826862FACD6226BF4B1200 /* Kei3BirdsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kei3BirdsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				9C2418E36440BEBE082EF768 /* BirdCardView.swift */,
 				612155D7A7AC88B73FAA1568 /* BirdPinView.swift */,
+				1DB70E83F8039AE51D3EB9A2 /* CachedAsyncImage.swift */,
 				E9A7ECFAB114964CCD0A03BA /* LoadingView.swift */,
 			);
 			path = Components;
@@ -422,6 +425,7 @@
 				5A7FC8A77A75A1C63ABA4FCE /* BirdDetailView.swift in Sources */,
 				CF1F28BCC2029BF860072962 /* BirdDetailViewModel.swift in Sources */,
 				10854C90960560EBB04DCD58 /* BirdPinView.swift in Sources */,
+				845778805BC1C35C269B7F9E /* CachedAsyncImage.swift in Sources */,
 				663549AAF4EB9AB31420BAA7 /* CameraView.swift in Sources */,
 				2A9DFCAF134A1254FE4DB9CC /* DependencyContainer.swift in Sources */,
 				FB1925EBD30DB2ECBA64B41E /* EXIFHelper.swift in Sources */,
