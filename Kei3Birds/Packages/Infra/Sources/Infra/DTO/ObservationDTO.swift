@@ -41,7 +41,7 @@ struct AICandidateDTO: Codable, Sendable {
 }
 
 struct CreateObservationRequestDTO: Codable, Sendable {
-    let species_id: Int
+    let species_id: Int?
     let photo_url: String
     let taken_at: String
     let lat: Double
