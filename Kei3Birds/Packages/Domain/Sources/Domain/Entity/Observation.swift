@@ -29,7 +29,7 @@ public struct BirdObservation: Sendable, Identifiable, Hashable {
 }
 
 public struct CreateObservationInput: Sendable {
-    public let speciesId: Int
+    public let speciesId: Int?
     public let photoUrl: String
     public let takenAt: String
     public let lat: Double
@@ -37,7 +37,7 @@ public struct CreateObservationInput: Sendable {
     public let locationName: String
     public let notes: String?
 
-    public init(speciesId: Int, photoUrl: String, takenAt: String, lat: Double, lng: Double, locationName: String, notes: String?) {
+    public init(speciesId: Int?, photoUrl: String, takenAt: String, lat: Double, lng: Double, locationName: String, notes: String?) {
         self.speciesId = speciesId
         self.photoUrl = photoUrl
         self.takenAt = takenAt
