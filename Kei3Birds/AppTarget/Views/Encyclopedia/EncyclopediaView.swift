@@ -10,7 +10,7 @@ struct EncyclopediaView: View {
     var body: some View {
         NavigationStack {
             Group {
-                if !viewModel.isLoading && viewModel.capturedBirds.isEmpty {
+                if !viewModel.isLoading && viewModel.encyclopediaEntries.isEmpty {
                     ContentUnavailableView(
                         "まだ図鑑に登録がありません",
                         systemImage: "book.closed",
@@ -19,21 +19,22 @@ struct EncyclopediaView: View {
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 12) {
-                            ForEach(viewModel.filteredCapturedBirds) { bird in
-                                NavigationLink {
-                                    BirdDetailView(
-                                        speciesId: bird.id,
-                                        viewModel: BirdDetailViewModel(
-                                            fetchBirdsUseCase: container.fetchBirdsUseCase,
-                                            fetchObservationsUseCase: container.fetchObservationsUseCase
-                                        ),
-                                        username: ""
-                                    )
-                                } label: {
-                                    EncyclopediaCardView(
-                                        bird: bird,
-                                        photoURL: viewModel.photoURL(for: bird.id)
-                                    )
+                            ForEach(viewModel.filteredEncyclopediaEntries) { entry in
+                                if let speciesId = entry.speciesId {
+                                    NavigationLink {
+                                        BirdDetailView(
+                                            speciesId: speciesId,
+                                            viewModel: BirdDetailViewModel(
+                                                fetchBirdsUseCase: container.fetchBirdsUseCase,
+                                                fetchObservationsUseCase: container.fetchObservationsUseCase
+                                            ),
+                                            username: ""
+                                        )
+                                    } label: {
+                                        EncyclopediaCardView(entry: entry)
+                                    }
+                                } else {
+                                    EncyclopediaCardView(entry: entry)
                                 }
                             }
                         }
@@ -54,12 +55,11 @@ struct EncyclopediaView: View {
 }
 
 private struct EncyclopediaCardView: View {
-    let bird: Bird
-    let photoURL: String?
+    let entry: EncyclopediaEntry
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            if let urlString = photoURL, let url = URL(string: urlString) {
+            if let url = URL(string: entry.photoUrl) {
                 CachedAsyncImage(url: url)
                     .frame(height: 150)
                     .frame(maxWidth: .infinity)
@@ -67,14 +67,16 @@ private struct EncyclopediaCardView: View {
             }
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(bird.nameJa)
+                Text(entry.nameJa)
                     .font(.subheadline.bold())
                     .foregroundStyle(.primary)
-                Text(bird.scientificName)
-                    .font(.caption2)
-                    .italic()
-                    .foregroundStyle(.secondary)
-                    .lineLimit(1)
+                if let scientificName = entry.scientificName {
+                    Text(scientificName)
+                        .font(.caption2)
+                        .italic()
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                }
             }
             .padding(.horizontal, 8)
             .padding(.vertical, 6)

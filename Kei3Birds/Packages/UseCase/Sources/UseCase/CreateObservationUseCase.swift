@@ -14,6 +14,9 @@ public final class CreateObservationUseCase: Sendable {
         let photoUrl = try await uploadRepository.uploadPhoto(imageData: imageData, fileExtension: "jpg")
         let finalInput = CreateObservationInput(
             speciesId: input.speciesId,
+            aiSpeciesId: input.aiSpeciesId,
+            nameJa: input.nameJa,
+            scientificName: input.scientificName,
             photoUrl: photoUrl,
             takenAt: input.takenAt,
             lat: input.lat,
