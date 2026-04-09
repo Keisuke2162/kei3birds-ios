@@ -32,6 +32,11 @@ struct CameraView: View {
                     Task { await viewModel.identifyBird(image: image) }
                 }
             }
+            .alert("登録完了", isPresented: $viewModel.showRegistrationSuccess) {
+                Button("OK") {}
+            } message: {
+                Text("「\(viewModel.registeredBirdName)」を図鑑に登録しました")
+            }
             .photosPicker(isPresented: $showPhotoPicker, selection: $selectedPhotoItem, matching: .images)
             .onChange(of: selectedPhotoItem) {
                 guard let item = selectedPhotoItem else { return }

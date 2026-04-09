@@ -27,6 +27,7 @@ final class EncyclopediaViewModel {
     var observations: [BirdObservation] = []
     var searchText = ""
     var isLoading = false
+    private var hasLoaded = false
     var errorMessage: String?
 
     init(fetchBirdsUseCase: FetchBirdsUseCase, fetchObservationsUseCase: FetchObservationsUseCase) {
@@ -84,6 +85,11 @@ final class EncyclopediaViewModel {
 
     // MARK: - データ読み込み
 
+    func loadDataIfNeeded() async {
+        guard !hasLoaded else { return }
+        await loadData()
+    }
+
     func loadData() async {
         isLoading = true
         errorMessage = nil
@@ -92,6 +98,7 @@ final class EncyclopediaViewModel {
             async let obs = fetchObservationsUseCase.execute()
             allBirds = try await birds
             observations = try await obs
+            hasLoaded = true
         } catch {
             errorMessage = error.localizedDescription
         }
