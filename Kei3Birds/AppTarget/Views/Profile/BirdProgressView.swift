@@ -24,6 +24,7 @@ struct BirdProgressView: View {
                         NavigationLink {
                             BirdDetailView(
                                 speciesId: bird.id,
+                                nameJa: bird.nameJa,
                                 viewModel: BirdDetailViewModel(
                                     fetchBirdsUseCase: container.fetchBirdsUseCase,
                                     fetchObservationsUseCase: container.fetchObservationsUseCase
