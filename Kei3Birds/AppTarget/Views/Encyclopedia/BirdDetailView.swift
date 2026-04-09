@@ -58,7 +58,7 @@ struct BirdDetailView: View {
         .task { await viewModel.loadData(speciesId: speciesId) }
         .sheet(item: $selectedObservation) { obs in
             ObservationDetailSheet(observation: obs, birdName: viewModel.bird?.nameJa ?? "", username: username)
-                .presentationDetents([.medium])
+                .presentationDetents([.large])
         }
     }
 }

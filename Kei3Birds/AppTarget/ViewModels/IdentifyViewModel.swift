@@ -23,6 +23,8 @@ final class IdentifyViewModel {
     var selectedCandidate: AICandidate?
     var notes = ""
     var isRegistering = false
+    var showRegistrationSuccess = false
+    var registeredBirdName = ""
 
     init(identifyBirdUseCase: IdentifyBirdUseCase, createObservationUseCase: CreateObservationUseCase) {
         self.identifyBirdUseCase = identifyBirdUseCase
@@ -60,7 +62,7 @@ final class IdentifyViewModel {
         defer { isRegistering = false }
 
         do {
-            let exif = EXIFHelper.extractMetadata(from: image)
+            let exif = await EXIFHelper.extractMetadata(from: image)
             let input = CreateObservationInput(
                 speciesId: candidate.speciesId,
                 aiSpeciesId: candidate.aiSpeciesId,
@@ -74,7 +76,9 @@ final class IdentifyViewModel {
                 notes: notes.isEmpty ? nil : notes
             )
             _ = try await createObservationUseCase.execute(imageData: imageData, input: input)
+            registeredBirdName = candidate.nameJa
             reset()
+            showRegistrationSuccess = true
         } catch {
             state = .error("登録に失敗しました: \(error.localizedDescription)")
         }

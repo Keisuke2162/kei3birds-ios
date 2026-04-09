@@ -46,10 +46,11 @@ struct EncyclopediaView: View {
             .navigationTitle("図鑑")
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $viewModel.searchText, prompt: "名前で検索")
+            .refreshable { await viewModel.loadData() }
             .overlay {
                 if viewModel.isLoading { LoadingView() }
             }
-            .task { await viewModel.loadData() }
+            .task { await viewModel.loadDataIfNeeded() }
         }
     }
 }

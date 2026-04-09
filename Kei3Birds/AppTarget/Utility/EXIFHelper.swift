@@ -1,5 +1,6 @@
 import UIKit
 import ImageIO
+import CoreLocation
 
 struct ImageMetadata {
     var latitude: Double?
@@ -9,7 +10,7 @@ struct ImageMetadata {
 }
 
 enum EXIFHelper {
-    static func extractMetadata(from image: UIImage) -> ImageMetadata {
+    static func extractMetadata(from image: UIImage) async -> ImageMetadata {
         var metadata = ImageMetadata()
 
         guard let data = image.jpegData(compressionQuality: 1.0),
@@ -35,6 +36,20 @@ enum EXIFHelper {
             formatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
             if let date = formatter.date(from: dateStr) {
                 metadata.takenAt = ISO8601DateFormatter().string(from: date)
+            }
+        }
+
+        // GPS座標から地名を逆ジオコーディング
+        if let lat = metadata.latitude, let lng = metadata.longitude {
+            let location = CLLocation(latitude: lat, longitude: lng)
+            let geocoder = CLGeocoder()
+            if let placemarks = try? await geocoder.reverseGeocodeLocation(location),
+               let placemark = placemarks.first {
+                let components = [placemark.administrativeArea, placemark.locality, placemark.subLocality]
+                let name = components.compactMap { $0 }.joined()
+                if !name.isEmpty {
+                    metadata.locationName = name
+                }
             }
         }
 
