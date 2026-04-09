@@ -24,6 +24,15 @@ final class EncyclopediaViewModel {
         return allBirds.filter { $0.nameJa.contains(searchText) || $0.nameEn.localizedCaseInsensitiveContains(searchText) }
     }
 
+    var capturedBirds: [Bird] {
+        allBirds.filter { capturedSpeciesIds.contains($0.id) }
+    }
+
+    var filteredCapturedBirds: [Bird] {
+        if searchText.isEmpty { return capturedBirds }
+        return capturedBirds.filter { $0.nameJa.contains(searchText) || $0.nameEn.localizedCaseInsensitiveContains(searchText) }
+    }
+
     var capturedSpeciesIds: Set<Int> {
         Set(observations.compactMap { $0.speciesId })
     }

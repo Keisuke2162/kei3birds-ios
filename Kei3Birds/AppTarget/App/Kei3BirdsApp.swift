@@ -62,7 +62,8 @@ struct MainTabView: View {
                         authUseCase: container.authUseCase,
                         username: authViewModel.currentUser?.username ?? "ゲスト"
                     ),
-                    authViewModel: authViewModel
+                    authViewModel: authViewModel,
+                    container: container
                 )
             }
         }
