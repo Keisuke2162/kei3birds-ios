@@ -63,6 +63,9 @@ final class IdentifyViewModel {
             let exif = EXIFHelper.extractMetadata(from: image)
             let input = CreateObservationInput(
                 speciesId: candidate.speciesId,
+                aiSpeciesId: candidate.aiSpeciesId,
+                nameJa: candidate.nameJa,
+                scientificName: candidate.scientificName,
                 photoUrl: "",
                 takenAt: exif.takenAt ?? ISO8601DateFormatter().string(from: Date()),
                 lat: exif.latitude ?? 0,
