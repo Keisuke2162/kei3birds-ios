@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04DB3A73A655B2329A526254 /* IdentifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85860FF675DF2EB33D0AA5CD /* IdentifyViewModel.swift */; };
+		0A1B2C3D4E5F6A7B8C9D0E1F /* BirdProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7A8B9C0D1E2F /* BirdProgressView.swift */; };
 		10854C90960560EBB04DCD58 /* BirdPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612155D7A7AC88B73FAA1568 /* BirdPinView.swift */; };
 		2A9DFCAF134A1254FE4DB9CC /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30DF7F7F37EC9598D98737 /* DependencyContainer.swift */; };
 		2C90CAFDF5353E650A18138E /* Infra in Frameworks */ = {isa = PBXBuildFile; productRef = 387A58BA419969A4EAC94FF7 /* Infra */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		0269AE77A00287879C5AA1BD /* EXIFHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIFHelper.swift; sourceTree = "<group>"; };
 		0353C10DF77862A41FBB5A58 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7A8B9C0D1E2F /* BirdProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdProgressView.swift; sourceTree = "<group>"; };
 		07FE529D838B2E5AF86B40F9 /* Kei3BirdsUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = Kei3BirdsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDD1F0DD82D20E509E6E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		16DC760AE26768783D6BFE34 /* UseCase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UseCase; path = Packages/UseCase; sourceTree = SOURCE_ROOT; };
@@ -121,6 +123,7 @@
 		4B373676B44A78E3E3BCBC8B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1A2B3C4D5E6F7A8B9C0D1E2F /* BirdProgressView.swift */,
 				5F5DDF313AF48CC522BE09AF /* ProfileView.swift */,
 			);
 			path = Profile;
@@ -424,6 +427,7 @@
 				8560B2AB397E0FE02611F74B /* BirdCardView.swift in Sources */,
 				5A7FC8A77A75A1C63ABA4FCE /* BirdDetailView.swift in Sources */,
 				CF1F28BCC2029BF860072962 /* BirdDetailViewModel.swift in Sources */,
+				0A1B2C3D4E5F6A7B8C9D0E1F /* BirdProgressView.swift in Sources */,
 				10854C90960560EBB04DCD58 /* BirdPinView.swift in Sources */,
 				845778805BC1C35C269B7F9E /* CachedAsyncImage.swift in Sources */,
 				663549AAF4EB9AB31420BAA7 /* CameraView.swift in Sources */,

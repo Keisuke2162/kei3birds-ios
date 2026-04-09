@@ -3,6 +3,7 @@ import SwiftUI
 struct ProfileView: View {
     @State var viewModel: ProfileViewModel
     let authViewModel: AuthViewModel
+    let container: DependencyContainer
 
     var body: some View {
         NavigationStack {
@@ -19,12 +20,22 @@ struct ProfileView: View {
                 }
 
                 Section("図鑑達成率") {
-                    VStack(alignment: .leading, spacing: 8) {
-                        ProgressView(value: viewModel.completionRate).tint(.green)
-                        Text("\(viewModel.capturedCount) / \(viewModel.totalSpecies)種 （\(Int(viewModel.completionRate * 100))%）")
-                            .font(.caption).foregroundStyle(.secondary)
+                    NavigationLink {
+                        BirdProgressView(
+                            viewModel: EncyclopediaViewModel(
+                                fetchBirdsUseCase: container.fetchBirdsUseCase,
+                                fetchObservationsUseCase: container.fetchObservationsUseCase
+                            ),
+                            container: container
+                        )
+                    } label: {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ProgressView(value: viewModel.completionRate).tint(.green)
+                            Text("\(viewModel.capturedCount) / \(viewModel.totalSpecies)種 （\(Int(viewModel.completionRate * 100))%）")
+                                .font(.caption).foregroundStyle(.secondary)
+                        }
+                        .padding(.vertical, 4)
                     }
-                    .padding(.vertical, 4)
                 }
 
                 Section("統計") {
