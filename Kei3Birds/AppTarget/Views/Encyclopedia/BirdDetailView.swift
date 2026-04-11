@@ -6,6 +6,7 @@ struct BirdDetailView: View {
     @State var viewModel: BirdDetailViewModel
     let username: String
     @State private var selectedObservation: BirdObservation?
+    @Environment(\.dismiss) private var dismiss
 
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 3)
 
@@ -56,9 +57,20 @@ struct BirdDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .overlay { if viewModel.isLoading { LoadingView() } }
         .task { await viewModel.loadData(speciesId: speciesId) }
+        .onChange(of: viewModel.didDeleteAll) { _, didDeleteAll in
+            if didDeleteAll { dismiss() }
+        }
         .sheet(item: $selectedObservation) { obs in
-            ObservationDetailSheet(observation: obs, birdName: viewModel.bird?.nameJa ?? "", username: username)
-                .presentationDetents([.large])
+            ObservationDetailSheet(
+                observation: obs,
+                birdName: viewModel.bird?.nameJa ?? "",
+                username: username,
+                onDelete: {
+                    selectedObservation = nil
+                    Task { await viewModel.deleteObservation(obs) }
+                }
+            )
+            .presentationDetents([.large])
         }
     }
 }
@@ -67,6 +79,8 @@ private struct ObservationDetailSheet: View {
     let observation: BirdObservation
     let birdName: String
     let username: String
+    let onDelete: () -> Void
+    @State private var showDeleteConfirmation = false
 
     var body: some View {
         NavigationStack {
@@ -94,11 +108,28 @@ private struct ObservationDetailSheet: View {
                         )
                     }
                     .buttonStyle(.borderedProminent)
+
+                    Button(role: .destructive) {
+                        showDeleteConfirmation = true
+                    } label: {
+                        Label("この写真を削除", systemImage: "trash")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                    .padding(.top, 8)
                 }
                 .padding()
             }
             .navigationTitle(birdName)
             .navigationBarTitleDisplayMode(.inline)
+            .confirmationDialog("この写真を削除しますか？", isPresented: $showDeleteConfirmation, titleVisibility: .visible) {
+                Button("削除", role: .destructive) {
+                    onDelete()
+                }
+                Button("キャンセル", role: .cancel) {}
+            } message: {
+                Text("この操作は取り消せません。写真がなくなると図鑑からも削除されます。")
+            }
         }
     }
 }

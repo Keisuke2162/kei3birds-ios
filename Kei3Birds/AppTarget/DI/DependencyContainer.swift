@@ -17,6 +17,7 @@ final class DependencyContainer {
     let fetchBirdsUseCase: FetchBirdsUseCase
     let fetchObservationsUseCase: FetchObservationsUseCase
     let createObservationUseCase: CreateObservationUseCase
+    let deleteObservationUseCase: DeleteObservationUseCase
     let fetchMapPointsUseCase: FetchMapPointsUseCase
     let identifyBirdUseCase: IdentifyBirdUseCase
 
@@ -44,6 +45,7 @@ final class DependencyContainer {
         self.fetchBirdsUseCase = FetchBirdsUseCase(repository: birdRepository)
         self.fetchObservationsUseCase = FetchObservationsUseCase(repository: observationRepository)
         self.createObservationUseCase = CreateObservationUseCase(observationRepository: observationRepository, uploadRepository: uploadRepository)
+        self.deleteObservationUseCase = DeleteObservationUseCase(repository: observationRepository)
         self.fetchMapPointsUseCase = FetchMapPointsUseCase(repository: mapRepository)
         self.identifyBirdUseCase = IdentifyBirdUseCase(repository: uploadRepository)
     }
