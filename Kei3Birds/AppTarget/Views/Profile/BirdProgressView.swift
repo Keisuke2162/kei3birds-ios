@@ -30,7 +30,8 @@ struct BirdProgressView: View {
                                     fetchObservationsUseCase: container.fetchObservationsUseCase,
                                     deleteObservationUseCase: container.deleteObservationUseCase
                                 ),
-                                username: ""
+                                username: "",
+                                onDataChanged: { viewModel.needsReload = true }
                             )
                         } label: {
                             BirdCardView(
@@ -51,5 +52,11 @@ struct BirdProgressView: View {
             if viewModel.isLoading { LoadingView() }
         }
         .task { await viewModel.loadData() }
+        .onChange(of: viewModel.needsReload) { _, needsReload in
+            if needsReload {
+                viewModel.needsReload = false
+                Task { await viewModel.loadData() }
+            }
+        }
     }
 }

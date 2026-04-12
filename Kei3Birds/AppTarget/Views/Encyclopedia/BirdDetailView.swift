@@ -7,6 +7,7 @@ struct BirdDetailView: View {
     let nameJa: String
     @State var viewModel: BirdDetailViewModel
     let username: String
+    var onDataChanged: (() -> Void)?
     @State private var selectedObservation: BirdObservation?
     @Environment(\.dismiss) private var dismiss
 
@@ -82,7 +83,10 @@ struct BirdDetailView: View {
                 username: username,
                 onDelete: {
                     selectedObservation = nil
-                    Task { await viewModel.deleteObservation(obs) }
+                    Task {
+                        await viewModel.deleteObservation(obs)
+                        onDataChanged?()
+                    }
                 }
             )
             .presentationDetents([.large])
