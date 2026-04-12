@@ -7,15 +7,19 @@ import UseCase
 final class BirdDetailViewModel {
     private let fetchBirdsUseCase: FetchBirdsUseCase
     private let fetchObservationsUseCase: FetchObservationsUseCase
+    private let deleteObservationUseCase: DeleteObservationUseCase
 
     var bird: Bird?
     var observations: [BirdObservation] = []
     var isLoading = false
     var errorMessage: String?
+    var isDeleting = false
+    var didDeleteAll = false
 
-    init(fetchBirdsUseCase: FetchBirdsUseCase, fetchObservationsUseCase: FetchObservationsUseCase) {
+    init(fetchBirdsUseCase: FetchBirdsUseCase, fetchObservationsUseCase: FetchObservationsUseCase, deleteObservationUseCase: DeleteObservationUseCase) {
         self.fetchBirdsUseCase = fetchBirdsUseCase
         self.fetchObservationsUseCase = fetchObservationsUseCase
+        self.deleteObservationUseCase = deleteObservationUseCase
     }
 
     func loadData(speciesId: Int) async {
@@ -30,5 +34,19 @@ final class BirdDetailViewModel {
             errorMessage = error.localizedDescription
         }
         isLoading = false
+    }
+
+    func deleteObservation(_ observation: BirdObservation) async {
+        isDeleting = true
+        do {
+            try await deleteObservationUseCase.execute(id: observation.id)
+            observations.removeAll { $0.id == observation.id }
+            if observations.isEmpty {
+                didDeleteAll = true
+            }
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+        isDeleting = false
     }
 }

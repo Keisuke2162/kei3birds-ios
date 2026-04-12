@@ -26,7 +26,8 @@ struct EncyclopediaView: View {
                                             speciesId: speciesId,
                                             viewModel: BirdDetailViewModel(
                                                 fetchBirdsUseCase: container.fetchBirdsUseCase,
-                                                fetchObservationsUseCase: container.fetchObservationsUseCase
+                                                fetchObservationsUseCase: container.fetchObservationsUseCase,
+                                                deleteObservationUseCase: container.deleteObservationUseCase
                                             ),
                                             username: ""
                                         )
