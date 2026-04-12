@@ -28,6 +28,7 @@ final class EncyclopediaViewModel {
     var searchText = ""
     var isLoading = false
     private var hasLoaded = false
+    var needsReload = false
     var errorMessage: String?
 
     init(fetchBirdsUseCase: FetchBirdsUseCase, fetchObservationsUseCase: FetchObservationsUseCase) {

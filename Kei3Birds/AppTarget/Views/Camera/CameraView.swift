@@ -4,6 +4,7 @@ import Domain
 
 struct CameraView: View {
     @State var viewModel: IdentifyViewModel
+    var onRegistrationComplete: (() -> Void)?
     @State private var showCamera = false
     @State private var showPhotoPicker = false
     @State private var selectedPhotoItem: PhotosPickerItem?
@@ -33,7 +34,9 @@ struct CameraView: View {
                 }
             }
             .alert("登録完了", isPresented: $viewModel.showRegistrationSuccess) {
-                Button("OK") {}
+                Button("OK") {
+                    onRegistrationComplete?()
+                }
             } message: {
                 Text("「\(viewModel.registeredBirdName)」を図鑑に登録しました")
             }

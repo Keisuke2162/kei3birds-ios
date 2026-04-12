@@ -29,7 +29,8 @@ struct EncyclopediaView: View {
                                             fetchObservationsUseCase: container.fetchObservationsUseCase,
                                             deleteObservationUseCase: container.deleteObservationUseCase
                                         ),
-                                        username: ""
+                                        username: "",
+                                        onDataChanged: { viewModel.needsReload = true }
                                     )
                                 } label: {
                                     EncyclopediaCardView(entry: entry)
@@ -49,6 +50,12 @@ struct EncyclopediaView: View {
                 if viewModel.isLoading { LoadingView() }
             }
             .task { await viewModel.loadDataIfNeeded() }
+            .onChange(of: viewModel.needsReload) { _, needsReload in
+                if needsReload {
+                    viewModel.needsReload = false
+                    Task { await viewModel.loadData() }
+                }
+            }
         }
     }
 }
