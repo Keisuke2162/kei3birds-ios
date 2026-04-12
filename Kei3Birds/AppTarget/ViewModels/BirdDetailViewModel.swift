@@ -36,6 +36,18 @@ final class BirdDetailViewModel {
         isLoading = false
     }
 
+    func loadObservationsOnly(nameJa: String) async {
+        isLoading = true
+        errorMessage = nil
+        do {
+            let allObs = try await fetchObservationsUseCase.execute()
+            observations = allObs.filter { $0.nameJa == nameJa }
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+        isLoading = false
+    }
+
     func deleteObservation(_ observation: BirdObservation) async {
         isDeleting = true
         do {

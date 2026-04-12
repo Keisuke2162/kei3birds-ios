@@ -20,21 +20,18 @@ struct EncyclopediaView: View {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 12) {
                             ForEach(viewModel.filteredEncyclopediaEntries) { entry in
-                                if let speciesId = entry.speciesId {
-                                    NavigationLink {
-                                        BirdDetailView(
-                                            speciesId: speciesId,
-                                            viewModel: BirdDetailViewModel(
-                                                fetchBirdsUseCase: container.fetchBirdsUseCase,
-                                                fetchObservationsUseCase: container.fetchObservationsUseCase,
-                                                deleteObservationUseCase: container.deleteObservationUseCase
-                                            ),
-                                            username: ""
-                                        )
-                                    } label: {
-                                        EncyclopediaCardView(entry: entry)
-                                    }
-                                } else {
+                                NavigationLink {
+                                    BirdDetailView(
+                                        speciesId: entry.speciesId,
+                                        nameJa: entry.nameJa,
+                                        viewModel: BirdDetailViewModel(
+                                            fetchBirdsUseCase: container.fetchBirdsUseCase,
+                                            fetchObservationsUseCase: container.fetchObservationsUseCase,
+                                            deleteObservationUseCase: container.deleteObservationUseCase
+                                        ),
+                                        username: ""
+                                    )
+                                } label: {
                                     EncyclopediaCardView(entry: entry)
                                 }
                             }
